@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sav-ME-bra">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drop View Controller-->
+        <scene sceneID="hAo-iS-QxU">
+            <objects>
+                <viewController id="sav-ME-bra" customClass="DropViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKe-XZ-mhv"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZV-zB-8uH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s2D-MQ-qck">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAP-oG-9F0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-lt-2Ib">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R3h-lt-2Ib" secondAttribute="bottom" id="Ils-vf-7W2"/>
+                                    <constraint firstAttribute="trailing" secondItem="R3h-lt-2Ib" secondAttribute="trailing" id="UMb-tc-VIF"/>
+                                    <constraint firstItem="R3h-lt-2Ib" firstAttribute="top" secondItem="SAP-oG-9F0" secondAttribute="top" id="eYd-9Y-FJm"/>
+                                    <constraint firstItem="R3h-lt-2Ib" firstAttribute="leading" secondItem="SAP-oG-9F0" secondAttribute="leading" id="uuS-u8-RGz"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4n-qA-1Od">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRU-99-MhP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilc-ck-Ouy">
+                                <rect key="frame" x="303" y="22" width="40" height="39"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1eA-gE-U0C"/>
+                                    <constraint firstAttribute="width" secondItem="Ilc-ck-Ouy" secondAttribute="height" multiplier="1:1" constant="1" id="qE2-HY-wYK"/>
+                                </constraints>
+                                <state key="normal" image="flash-off">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flashToggleButtonPressed:" destination="sav-ME-bra" eventType="touchUpInside" id="dn5-E9-Rvw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glr-hA-0P6">
+                                <rect key="frame" x="38" y="22" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="BCE-0M-EAs"/>
+                                    <constraint firstAttribute="width" secondItem="Glr-hA-0P6" secondAttribute="height" multiplier="1:1" id="G3J-eq-xsa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="back-button-white"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="sav-ME-bra" eventType="touchUpInside" id="tHR-1x-aah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZv-X8-pl4">
+                                <rect key="frame" x="144.5" y="555" width="85" height="85"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lZv-X8-pl4" secondAttribute="height" multiplier="1:1" id="WZN-ql-IhT"/>
+                                    <constraint firstAttribute="width" constant="85" id="zRZ-1B-jOi"/>
+                                </constraints>
+                                <state key="normal" image="take-a-photo-button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhotoButtonTapped:" destination="sav-ME-bra" eventType="touchUpInside" id="nIG-SX-RmL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-p0-Ft5" userLabel="Camera Position Toggle">
+                                <rect key="frame" x="303" y="577.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Eb-p0-Ft5" secondAttribute="height" multiplier="1:1" id="GEi-xA-EdV"/>
+                                    <constraint firstAttribute="width" constant="40" id="ryb-5T-Pyb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" image="camera-rotate"/>
+                                <connections>
+                                    <action selector="cameraPositionTogglePressed:" destination="sav-ME-bra" eventType="touchUpInside" id="I5J-wW-hd9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="EZV-zB-8uH" firstAttribute="top" secondItem="lZv-X8-pl4" secondAttribute="bottom" multiplier="1.03" constant="8" symbolic="YES" id="05R-qw-N8c"/>
+                            <constraint firstItem="lZv-X8-pl4" firstAttribute="centerX" secondItem="s2D-MQ-qck" secondAttribute="centerX" id="60h-SP-tEM"/>
+                            <constraint firstAttribute="trailing" secondItem="T4n-qA-1Od" secondAttribute="trailing" id="783-Wz-fBg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ilc-ck-Ouy" secondAttribute="trailing" constant="16" id="9En-bq-ZhJ"/>
+                            <constraint firstAttribute="trailing" secondItem="MRU-99-MhP" secondAttribute="trailing" id="AlX-JO-xDN"/>
+                            <constraint firstItem="Ilc-ck-Ouy" firstAttribute="top" secondItem="s2D-MQ-qck" secondAttribute="topMargin" constant="22" id="CLg-hm-dBm"/>
+                            <constraint firstItem="0Eb-p0-Ft5" firstAttribute="centerY" secondItem="lZv-X8-pl4" secondAttribute="centerY" id="MDr-2O-zbw"/>
+                            <constraint firstItem="MRU-99-MhP" firstAttribute="top" secondItem="oKe-XZ-mhv" secondAttribute="bottom" constant="-20" id="Pqt-Lv-AvA"/>
+                            <constraint firstAttribute="bottom" secondItem="SAP-oG-9F0" secondAttribute="bottom" id="SOm-99-kC1"/>
+                            <constraint firstItem="SAP-oG-9F0" firstAttribute="top" secondItem="s2D-MQ-qck" secondAttribute="top" id="SRz-25-F7T"/>
+                            <constraint firstItem="Glr-hA-0P6" firstAttribute="top" secondItem="s2D-MQ-qck" secondAttribute="topMargin" constant="22" id="YrG-g4-nJ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Eb-p0-Ft5" secondAttribute="trailing" constant="16" id="ZFE-MJ-n85"/>
+                            <constraint firstAttribute="bottom" secondItem="T4n-qA-1Od" secondAttribute="bottom" id="ZmO-wM-Fsu"/>
+                            <constraint firstItem="Glr-hA-0P6" firstAttribute="leading" secondItem="s2D-MQ-qck" secondAttribute="leadingMargin" constant="22" id="bBK-7A-mhE"/>
+                            <constraint firstItem="T4n-qA-1Od" firstAttribute="top" secondItem="s2D-MQ-qck" secondAttribute="top" id="bBo-P0-gXI"/>
+                            <constraint firstAttribute="trailing" secondItem="SAP-oG-9F0" secondAttribute="trailing" id="dqc-Wv-vzM"/>
+                            <constraint firstItem="MRU-99-MhP" firstAttribute="leading" secondItem="s2D-MQ-qck" secondAttribute="leading" id="sMQ-J9-c3a"/>
+                            <constraint firstItem="T4n-qA-1Od" firstAttribute="leading" secondItem="s2D-MQ-qck" secondAttribute="leading" id="sUJ-M8-GMB"/>
+                            <constraint firstItem="EZV-zB-8uH" firstAttribute="top" secondItem="MRU-99-MhP" secondAttribute="bottom" id="sVk-X9-yeq"/>
+                            <constraint firstItem="SAP-oG-9F0" firstAttribute="leading" secondItem="s2D-MQ-qck" secondAttribute="leading" id="sme-7e-Uyn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Glr-hA-0P6" id="WiM-JR-jnS"/>
+                        <outlet property="cameraPositionToggle" destination="0Eb-p0-Ft5" id="0pq-KC-47O"/>
+                        <outlet property="cameraView" destination="SAP-oG-9F0" id="YZt-Qz-NSd"/>
+                        <outlet property="flashToggle" destination="Ilc-ck-Ouy" id="8Qy-Ca-BeH"/>
+                        <outlet property="overlayView" destination="R3h-lt-2Ib" id="AjY-n2-aAb"/>
+                        <outlet property="pictureCapturingView" destination="T4n-qA-1Od" id="gwa-5d-dQq"/>
+                        <outlet property="takePhotoButton" destination="lZv-X8-pl4" id="Ult-rt-5J8"/>
+                        <segue destination="8FB-P5-UuS" kind="presentation" identifier="toDropPreview" modalTransitionStyle="crossDissolve" id="ab3-6t-R55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJZ-US-Dwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="120.98950524737631"/>
+        </scene>
+        <!--DropPreview-->
+        <scene sceneID="mdd-mN-AqC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DropPreview" id="8FB-P5-UuS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6b-rb-CbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-button-white" width="126" height="126"/>
+        <image name="camera-rotate" width="126" height="126"/>
+        <image name="flash-off" width="126" height="126"/>
+        <image name="take-a-photo-button" width="94" height="94"/>
+    </resources>
+</document>
